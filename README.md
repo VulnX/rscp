@@ -1,14 +1,10 @@
 # rscp
 
----
-
 A :rocket: blazingly fast Rust-based file transfer utility for quick sharing in local network.
 
 ## Features
 
----
-
-- **Blazingly Fast Transfers:** Leverage the power of Rust's high-performance capabilities for lightning-fast file uploads and downloads.
+**Blazingly Fast Transfers:** Leverage the power of Rust's high-performance capabilities for lightning-fast file uploads and downloads.
 
 - **User-Friendly Web Interface:** Intuitive web interface for users to easily upload and download files without technical complexities.
 
@@ -20,31 +16,17 @@ A :rocket: blazingly fast Rust-based file transfer utility for quick sharing in 
 
 ## Usage
 
----
-
 ### Send
 
----
-
-[SHOW VIDEO HERE]
-
-
+[send.mp4](https://github.com/VulnX/rscp/raw/main/demo/send.mp4)
 
 ### Receive
 
----
-
-[SHOW VIDEO HERE]
-
-
+[receive.mp4](https://github.com/VulnX/rscp/raw/main/demo/receive.mp4)
 
 ## Installation
 
----
-
 ### From source
-
----
 
 Make sure you have Rust and Cargo installed on your system. If not, you can install them from [https://www.rust-lang.org/](https://www.rust-lang.org/).
 
@@ -57,26 +39,24 @@ git clone https://github.com/vulnx/rscp.git
 You **need** to set this project as "nightly" to build a release for yourself:
 
 ```bash
-$ rustup override set nightly
+rustup override set nightly
 ```
 
 Then build the utility in release mode:
 
 ```bash
-$ cargo build --release
+cargo build --release
 ```
 
 Once the build process is complete, you can find the executable in the `target/release/` directory.
 
 ### Linux
 
----
-
 Download the latest linux .tar.gz archive from the Releases page, extract it, set execution permissions, then move the binary to the local bin directory.
 
 ```bash
 # Extract the archive
-tar xf path/to/rscp_1.0.0_linux_x86_64.tar.gz
+tar xf rscp_1.0.0_linux_x86_64.tar.gz
 # Set execution permissions
 sudo chmod +x rscp
 # Move the binary to bin directory
@@ -86,18 +66,14 @@ sudo mv rscp /usr/local/bin
 Now you simply run the application as:
 
 ```bash
-$ rscp
+rscp
 ```
 
 ### Windows
 
----
-
 Download the latest windows .tar.gz archive from the Releases page, extract it, and run it executable.
 
-> NOTE: You might need to allow it through firewall if the port 8080 is not open
-
-
+> NOTE: You might need to allow it through firewall if the port 8000 is not open
 
 ## Additional
 
