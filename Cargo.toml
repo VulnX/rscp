@@ -1,0 +1,16 @@
+[package]
+name = "rscp"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+local-ip-address = "0.5.3"
+rocket = "0.4.11"
+qrcode = { version = "0.12", default-features = false }
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
