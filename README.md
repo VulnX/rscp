@@ -22,11 +22,11 @@ A :rocket: blazingly fast Rust-based file transfer utility for quick sharing in 
 
 ### Send
 
-https://github.com/VulnX/rscp/assets/62636727/a4b6b95b-c228-4bc3-9726-afadbc84f805
+https://github.com/VulnX/rscp/assets/62636727/c5d1e34a-1dbc-414b-b3af-9048ba5b93a0
 
 ### Receive
 
-https://github.com/VulnX/rscp/assets/62636727/275b3125-7e54-4f5d-b03d-a459afbd0528
+https://github.com/VulnX/rscp/assets/62636727/93c1afb2-a19e-413e-8152-1c350ef7cae3
 
 ## Installation
 
