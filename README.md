@@ -4,7 +4,9 @@ A :rocket: blazingly fast Rust-based file transfer utility for quick sharing in 
 
 ## Features
 
-**Blazingly Fast Transfers:** Leverage the power of Rust's high-performance capabilities for lightning-fast file uploads and downloads.
+- **Blazingly Fast Transfers:** Leverage the power of Rust's high-performance capabilities for lightning-fast file uploads and downloads.
+
+- **QR Code Convenience:** Users can simply scan QR code to access the file download/upload portal, eliminating the need for complex URLs or manual input
 
 - **User-Friendly Web Interface:** Intuitive web interface for users to easily upload and download files without technical complexities.
 
@@ -14,15 +16,17 @@ A :rocket: blazingly fast Rust-based file transfer utility for quick sharing in 
 
 - **Cross-Platform Compatibility:** Compatibility with major operating systems (Windows, Linux).
 
+- **Easy Installation and Usage:** Get started quickly with straightforward installation instructions enabling users to setup the utility effortlessly
+
 ## Usage
 
 ### Send
 
-[send.mp4](https://github.com/VulnX/rscp/raw/main/demo/send.mp4)
+https://github.com/VulnX/rscp/assets/62636727/a4b6b95b-c228-4bc3-9726-afadbc84f805
 
 ### Receive
 
-[receive.mp4](https://github.com/VulnX/rscp/raw/main/demo/receive.mp4)
+https://github.com/VulnX/rscp/assets/62636727/275b3125-7e54-4f5d-b03d-a459afbd0528
 
 ## Installation
 
@@ -52,7 +56,7 @@ Once the build process is complete, you can find the executable in the `target/r
 
 ### Linux
 
-Download the latest linux .tar.gz archive from the Releases page, extract it, set execution permissions, then move the binary to the local bin directory.
+Download the latest linux .tar.gz archive from the [Releases](https://github.com/VulnX/rscp/releases) page, extract it, set execution permissions, then move the binary to the local bin directory.
 
 ```bash
 # Extract the archive
@@ -71,7 +75,7 @@ rscp
 
 ### Windows
 
-Download the latest windows .tar.gz archive from the Releases page, extract it, and run it executable.
+Download the latest windows .tar.gz archive from the [Releases](https://github.com/VulnX/rscp/releases) page, extract it, and run the executable.
 
 > NOTE: You might need to allow it through firewall if the port 8000 is not open
 
