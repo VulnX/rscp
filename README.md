@@ -60,7 +60,7 @@ Download the latest linux .tar.gz archive from the [Releases](https://github.com
 
 ```bash
 # Extract the archive
-tar xf rscp_1.0.0_linux_x86_64.tar.gz
+tar xf rscp_1.1.0_linux_x86_64.tar.gz
 # Set execution permissions
 sudo chmod +x rscp
 # Move the binary to bin directory

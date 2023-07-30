@@ -5,7 +5,7 @@
 ///         A blazingly fast Rust-based file transfer utility for quick sharing in local network.
 ///
 ///         Author  : VulnX
-///         Version : 1.0.0
+///         Version : 1.1.0
 ///         License : MIT
 ///         GitHub  : https://github.com/vulnx/rscp
 /// 
@@ -14,10 +14,21 @@ use std::{io::{self, Write, BufWriter}, path::{PathBuf, Path}, fs::{self, File},
 use local_ip_address::local_ip;
 use rocket::{response::{NamedFile, content::Html, Content}, Data, Config, config::Environment, logger::LoggingLevel, http::{Status, ContentType}};
 use qrcode::{QrCode, render::unicode::Dense1x2};
+use fs2::available_space;
 
 #[macro_use]
 extern crate rocket;
 
+#[get("/get_available_space")]
+fn get_available_space() -> io::Result<rocket::response::content::Json<String>> {
+    let avail_space = available_space(".")?;
+    let response_json = format!(
+        "{{ \"availableSpace\": {} }}",
+        avail_space
+    );
+
+    Ok(rocket::response::content::Json(response_json))
+}
 
 #[get("/upload")]
 fn upload() -> Html<String> {
@@ -131,7 +142,7 @@ button:hover, button:active, button:disabled {
                 document.querySelector('#progress').style.opacity = '0';
                 document.querySelector('#progress').style.width = '0';
             }
-            function uploadFile() {
+            async function uploadFile() {
                 var file = document.querySelector('#fileInput').files[0];
                 var progressBar = document.querySelector('#progress');
                 var statusBar = document.querySelector('.status-container');
@@ -139,6 +150,14 @@ button:hover, button:active, button:disabled {
                 var uploadBtn = document.querySelector('#uploadBtn');
                 if (!file) {
                     alert('Please select a file');
+                    return;
+                }
+
+                const response = await fetch('/get_available_space');
+                const { availableSpace } = await response.json();
+                
+                if (file.size >= availableSpace) {
+                    alert('Not enough space on server to upload file');
                     return;
                 }
 
@@ -291,7 +310,7 @@ Choose
                     .unwrap_or(false)) {
                 fs::create_dir("files").expect("Failed to create the directory");
             }
-            (routes![upload, upload_file], "http://{}:8000/upload")
+            (routes![upload, upload_file, get_available_space], "http://{}:8000/upload")
         }
         _ => {
             println!("INVALID CHOICE. PLEASE RETRY");
