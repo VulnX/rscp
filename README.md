@@ -22,11 +22,11 @@ A :rocket: blazingly fast Rust-based file transfer utility for quick sharing in 
 
 ### Send
 
-https://github.com/VulnX/rscp/assets/62636727/a4b6b95b-c228-4bc3-9726-afadbc84f805
+https://github.com/VulnX/rscp/assets/62636727/b3d66901-eca0-493c-a564-fd5facfc33f6
 
 ### Receive
 
-https://github.com/VulnX/rscp/assets/62636727/275b3125-7e54-4f5d-b03d-a459afbd0528
+https://github.com/VulnX/rscp/assets/62636727/9e335534-69e1-4730-a24d-a9d146bb7c78
 
 ## Installation
 
@@ -56,7 +56,7 @@ Download the latest linux executable from the [Releases](https://github.com/Vuln
 # Set execution permissions
 sudo chmod +x rscp*
 # Move the binary to bin directory
-sudo mv rscp* /usr/local/bin
+sudo mv rscp* /usr/local/bin/rscp
 ```
 
 Now run the application:
