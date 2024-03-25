@@ -40,13 +40,7 @@ Get the source code by cloning this project:
 git clone https://github.com/vulnx/rscp.git
 ```
 
-You **need** to set this project as "nightly" to build a release for yourself:
-
-```bash
-rustup override set nightly
-```
-
-Then build the utility in release mode:
+Then build in release mode:
 
 ```bash
 cargo build --release
@@ -56,18 +50,16 @@ Once the build process is complete, you can find the executable in the `target/r
 
 ### Linux
 
-Download the latest linux .tar.gz archive from the [Releases](https://github.com/VulnX/rscp/releases) page, extract it, set execution permissions, then move the binary to the local bin directory.
+Download the latest linux executable from the [Releases](https://github.com/VulnX/rscp/releases) page, set execution permissions, then move the binary to the local bin directory.
 
 ```bash
-# Extract the archive
-tar xf rscp_1.1.0_linux_x86_64.tar.gz
 # Set execution permissions
-sudo chmod +x rscp
+sudo chmod +x rscp*
 # Move the binary to bin directory
-sudo mv rscp /usr/local/bin
+sudo mv rscp* /usr/local/bin
 ```
 
-Now you simply run the application as:
+Now run the application:
 
 ```bash
 rscp
@@ -75,12 +67,17 @@ rscp
 
 ### Windows
 
-Download the latest windows .tar.gz archive from the [Releases](https://github.com/VulnX/rscp/releases) page, extract it, and run the executable.
+Download the latest windows executable from the [Releases](https://github.com/VulnX/rscp/releases) page, and run it.
 
-> NOTE: You might need to allow it through firewall if the port 8000 is not open
+> NOTE: You might need to allow it through the firewall.
+
+## TODO
+- Improve code documentation
+- Add support for zipping files
+- Add support for Android and Mac OS
 
 ## Additional
 
-This is mainly a personal project for me to learn Rust and Rocket by making an actual usable program.
+This is mainly a personal project for me to learn Rust by making an actual usable program.
 
 The inspiration is from [qrcp](https://github.com/claudiodangelis/qrcp)
